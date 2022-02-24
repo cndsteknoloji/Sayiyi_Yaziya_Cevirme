@@ -37,13 +37,13 @@ namespace Sayiyi_Yaziya_Cevirme
                 string s = lira.Substring(i, 1);
                 if (s != "0")
                     grupDegeri += birler[Convert.ToInt32(lira.Substring(i, 1))] + "YÜZ"; //yüzler            
-                if (grupDegeri == "BİRYÜZ") //biryüz düzeltiliyor.         
+                if (grupDegeri == "BİR YÜZ ") //biryüz düzeltiliyor.         
                     grupDegeri = "YÜZ";
                 grupDegeri += onlar[Convert.ToInt32(lira.Substring(i + 1, 1))]; //onlar  
                 grupDegeri += birler[Convert.ToInt32(lira.Substring(i + 2, 1))]; //birler    
                 if (grupDegeri != "") //binler    
                     grupDegeri += binler[i / 3];
-                if (grupDegeri == "BİRBİN") //birbin düzeltiliyor.         
+                if (grupDegeri == "BİR BİN ") //birbin düzeltiliyor.         
                     grupDegeri = "BİN";
                 yazi += grupDegeri;
             }
